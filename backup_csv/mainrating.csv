@@ -1,0 +1,182 @@
+department,semester,staff,subject,q1_avg,q2_avg,q3_avg,q4_avg,q5_avg,q6_avg,q7_avg,q8_avg,q9_avg,q10_avg,overall_average
+Computer Science and Business Systems -A,4,Mr.S.Syed Fazlullah [SS],23MAT401- Probability and Statistics [PS],5.00,9.00,7.67,7.67,7.67,7.67,7.67,7.67,7.67,7.67,7.53
+Computer Science and Business Systems -A,4,Mrs.R.Pavithra [RP],23CST403 - Database Management Systems [DBMS],7.33,7.33,7.33,7.33,7.33,7.33,7.33,7.00,7.33,8.33,7.40
+Computer Science and Business Systems -A,4,Mr. K. Arunjunai Karthick [KA],23CST402- Operating Systems [OS],8.33,8.33,8.33,8.33,8.33,8.33,8.33,8.33,8.33,8.33,8.33
+Computer Science and Business Systems -A,4,Mrs.P.Latha [PL],23CST405 - Introduction to Business Systems [IBS],8.00,8.00,8.00,8.00,8.00,8.00,8.00,8.00,8.00,8.00,8.00
+Computer Science and Business Systems -A,4,Mrs.C.Manonmani [CM],23ALT404- Machine Learning [ML],8.00,7.33,7.67,7.33,7.33,7.33,7.33,7.33,7.33,7.33,7.43
+Computer Science and Business Systems -A,4,Dr.J.Thulasidasan [JT],23GET401- Enviornmental Sciences and Engineering [ES],7.67,7.67,7.67,6.33,7.67,7.67,7.67,7.67,7.67,7.67,7.53
+Computer Science and Business Systems -A,4,Mrs.R.Pavithra [RP],23CSP402 - Database Management Systems [DBMS LAB],7.33,7.33,7.33,7.33,7.33,7.33,7.33,7.33,7.67,7.33,7.37
+Computer Science and Business Systems -A,4,Mrs.C.Manonmani [CM],23ALP402 - Machine Learning [ML LAB],7.33,7.33,7.33,7.33,7.33,8.33,7.33,8.00,7.33,7.33,7.50
+Computer Science and Business Systems -A,4,Dr.N.Kalaiarasi[NK],23CW3411- Business Communication [BC LAB-II],7.33,7.33,7.33,7.33,7.33,7.33,6.33,6.33,6.33,6.33,6.93
+Computer Science and Business Systems -A,4,Mr. K. Arunjunai Karthick [KA],23CST402 - Operating Systems [OS LAB],6.67,7.00,6.00,6.00,6.00,6.00,6.00,6.00,6.00,7.00,6.27
+Computer Science and Business Systems -A,4,Mr.Pradhap,Placement Training  Communication,6.00,6.67,6.00,7.33,6.00,6.00,6.67,6.00,6.67,6.67,6.40
+Computer Science and Business Systems -A,4,Mr.Thanu,Placement Training  coding,6.67,6.67,6.67,6.67,6.67,7.33,6.67,7.00,6.00,6.67,6.70
+Computer Science and Engineering -A,4,Mrs.T.Gayathri [TG],23CST401- Theory of Computation (TOC),8.67,8.56,8.56,8.44,8.89,8.56,8.44,8.67,8.78,8.67,8.62
+Computer Science and Engineering -A,4,Ms.S.Kamali[SK],23ALT402- Artificial Intelligence and Machine Learning (AIML),9.11,8.67,8.78,9.00,9.11,9.00,9.11,9.22,9.22,8.67,8.99
+Computer Science and Engineering -A,4,Mr.K.Srinath Yadav [KSY],23CST403- Database Management Systems (DBMS),9.22,8.33,8.11,9.22,8.44,9.22,8.78,8.78,8.89,9.00,8.80
+Computer Science and Engineering -A,4,Mr.S.P. Prasanth [SPP],23CST404- Algorithms (ALG),9.33,8.56,8.67,8.89,8.89,9.00,8.89,8.22,8.78,9.11,8.83
+Computer Science and Engineering -A,4,Dr.M.Sangeetha [MS],23CST402-Introduction to Operating Systems (OS),8.67,8.22,9.11,8.67,9.22,8.89,8.56,8.44,8.56,8.89,8.72
+Computer Science and Engineering -A,4,Dr.J.Thulasi Dhasan [TD],23GET401- Environmental Sciences and Sustainability (ESS),8.78,9.11,9.00,9.22,9.11,8.78,8.89,9.11,9.11,8.56,8.97
+Computer Science and Engineering -A,4,Dr.M.Sangeetha [MS],23CSP401- Operating Systems Laboratory,9.22,8.67,8.44,9.22,8.67,9.00,8.67,8.89,8.89,8.56,8.82
+Computer Science and Engineering -A,4,Mr.Arunjunai Karthick,23CSP402- Database Management Systems      Laboratory,8.78,8.67,9.22,8.78,8.44,8.56,8.44,8.56,8.56,8.78,8.68
+Computer Science and Engineering -A,4,Ms.S.Kamali[SK],ALT402-Artificial Intelligence and Machine Learning Laboratory,9.44,8.67,8.56,9.11,9.11,8.67,9.11,8.67,9.11,9.00,8.94
+Computer Science and Engineering -A,4,Mr.S.P. Prasanth [SPP],23CST404-Algorithm Laboratory (ALG LAB),9.00,8.56,8.67,9.00,8.44,9.00,9.11,8.78,9.22,9.11,8.89
+Computer Science and Engineering -A,4,Mr.Pradeesh,Placement Training (CODING),9.00,8.89,8.67,8.89,9.11,8.89,8.89,9.00,8.89,8.89,8.91
+Computer Science and Engineering -A,4,Mrs.Kamatchi,Placement Training (COMMUNICATION),8.78,9.11,8.78,9.00,9.22,9.11,9.67,9.11,9.22,8.56,9.06
+Computer Science and Engineering -A,6,Mr. P. Anbumani,CCS356- Object oriented Software Engineering (OOSE),8.80,9.10,8.60,9.20,9.20,8.70,9.10,8.90,9.20,9.20,9.00
+Computer Science and Engineering -A,6,Mr. K. Maheshkumar,CS3691-Embedded systems and IOT (ESIOT),8.70,8.80,9.00,9.00,9.10,9.00,8.50,9.00,8.70,9.00,8.88
+Computer Science and Engineering -A,6,Mr. S. Muthukumar,OEE351 -Renewable Energy System (RES),9.00,8.90,9.10,8.50,8.50,8.40,8.90,9.10,9.40,8.80,8.86
+Computer Science and Engineering -A,6,Mr. S. Gunasekaran,CCS335-Cloud Computing (CC),9.00,9.10,9.10,9.10,9.00,8.80,9.20,8.90,8.60,8.80,8.96
+Computer Science and Engineering -A,6,Mr. Gowtham Siddharth,CCS354- Network Security (NS),8.60,8.60,8.50,8.70,8.80,8.80,8.50,8.50,8.90,8.50,8.64
+Computer Science and Engineering -A,6,Dr. S. Prabakaran,CCW332- Digital Marketing (DM),9.10,8.90,8.70,9.20,9.20,8.90,9.00,9.10,9.10,9.00,9.02
+Computer Science and Engineering -A,6,Ms. G. Yasika,CCS345- Ethics and AI (EAI),8.90,8.60,9.00,8.90,8.90,8.80,8.80,9.00,9.00,8.80,8.87
+Computer Science and Engineering -A,6,Mr. Mohamed Aftaf,Placement Training,8.90,9.20,9.00,8.80,8.80,9.10,9.10,9.00,9.20,9.40,9.05
+Chemical Engineering -A,4,Mass Transfer I,Dr.Padmesh Madesety,7.57,7.67,7.33,7.24,7.71,6.71,6.90,7.10,7.38,7.24,7.29
+Chemical Engineering -A,4,Chemical Engineering Thermodynamics I,Dr.Tripti De,7.67,7.90,7.81,7.90,7.95,7.90,7.76,8.05,8.10,7.81,7.89
+Chemical Engineering -A,4,Environmental Science and Engineering,Dr.Gobinath,8.38,8.19,8.43,8.38,8.57,8.52,8.33,8.52,8.62,8.67,8.46
+Chemical Engineering -A,4,Statistics and Quality Control,Mr.P.Boomi,9.57,9.62,9.71,9.76,9.43,9.52,9.38,9.57,9.67,9.52,9.58
+Chemical Engineering -A,4,Heat Transfer,Dr.A.Meenakshi Sundhar,8.95,8.90,8.76,9.00,8.81,8.71,8.81,8.95,8.76,8.90,8.86
+Chemical Engineering -A,4,Mechanical Operations,Dr.Bitang Kwrung Tripura,8.76,9.00,8.95,9.24,9.19,9.29,9.14,9.14,9.38,9.29,9.14
+Chemical Engineering -A,4,Mechanical Operations Laboratory,Dr.Tripti De,8.71,8.48,8.52,8.52,8.33,8.48,8.38,8.43,8.48,8.57,8.49
+Chemical Engineering -A,4,Fluid Mechanics Laboratory,Dr.S.Saravanan,8.90,8.81,8.57,9.05,8.95,8.81,8.67,8.52,8.67,9.14,8.81
+Electrical and Electronics Engineering -A,6,Mr. K.Karthi,Protection and Switchgear,9.79,9.69,9.64,9.72,9.69,9.77,9.72,9.72,9.67,9.87,9.73
+Electrical and Electronics Engineering -A,6,Mr.R.Sivakumar,Power System Operation and Control,9.74,9.62,9.69,9.59,9.79,9.62,9.74,9.67,9.64,9.72,9.68
+Electrical and Electronics Engineering -A,6,Mr.R.Arunkumar,Artificial Intelligence and Machine Learning Fundamentals,9.69,9.62,9.56,9.64,9.62,9.69,9.59,9.59,9.44,9.67,9.61
+Electrical and Electronics Engineering -A,6,Mr.S.Rajesh,HVDC and FACTS,9.62,9.77,9.56,9.69,9.64,9.74,9.69,9.69,9.56,9.59,9.66
+Electrical and Electronics Engineering -A,6,Dr.I.Kathir,Smart System Automation,9.69,9.67,9.77,9.62,9.67,9.79,9.56,9.56,9.69,9.59,9.66
+Electrical and Electronics Engineering -A,6,Dr.K.Umamaheswari,Power Electronics for Renewable Energy Systems,9.54,9.56,9.56,9.64,9.64,9.67,9.62,9.64,9.64,9.69,9.62
+Electrical and Electronics Engineering -A,6,Mr.Jihin Jino,Placement,9.56,9.46,9.59,9.49,9.46,9.62,9.46,9.49,9.54,9.46,9.51
+Computer Science and Engineering -C,4,Mrs.T.Gayathri,23CST402-Theory of  Computation,8.59,8.33,8.47,8.39,8.77,8.52,8.50,8.59,8.44,8.44,8.50
+Computer Science and Engineering -C,4,Ms.S.Kamali,23ALT402-Artificial Intelligence and Machine Learning,8.97,8.92,9.06,8.82,9.06,8.73,8.91,8.91,8.83,8.98,8.92
+Computer Science and Engineering -C,4,Mr.K.Srinath Yadav,23CST403 Database Management System,8.95,9.27,9.11,9.20,9.39,9.30,9.02,9.21,9.09,9.30,9.18
+Computer Science and Engineering -C,4,Mr.S.P.Prasanth,23CST404Algorithms,9.09,8.98,8.83,8.98,9.02,8.95,8.85,8.88,8.85,8.91,8.93
+Computer Science and Engineering -C,4,Mr.M.Balasubramani,23CST402 Operating System,8.45,8.86,8.77,8.88,8.88,8.91,8.76,8.89,8.83,8.92,8.82
+Computer Science and Engineering -C,4,Mr.Syed Ibrahim,23GET401  Environmental Science and Sustainability,9.27,9.00,9.09,8.98,8.95,9.08,8.98,8.89,8.76,9.08,9.01
+Computer Science and Engineering -C,4,Mr.M.Balasubramani,23CSP401- Operating Systems Laboratory,8.62,8.83,8.92,8.86,9.02,8.68,8.70,8.73,8.55,8.80,8.77
+Computer Science and Engineering -C,4,Ms.Anusuya,23CSP402- Database Management Systems      Laboratory,8.67,8.61,8.55,8.55,8.61,8.52,8.56,8.61,8.44,8.56,8.57
+Computer Science and Engineering -C,4,Mrs.T.Gayathri,ALT402-Artificial Intelligence and Machine Learning Laboratory,8.65,8.55,8.56,8.56,8.59,8.58,8.58,8.92,8.58,8.70,8.63
+Computer Science and Engineering -C,4,Mrs.C.Manonmani,23CST404-Algorithm Laboratory (ALG LAB),8.89,9.09,8.91,8.97,8.95,8.89,8.97,8.85,8.83,9.08,8.94
+Computer Science and Engineering -C,4,Mr.Thanu,Placement Training  (CODING),9.14,9.09,9.12,9.15,8.94,9.02,8.97,9.18,8.91,8.97,9.05
+Computer Science and Engineering -C,4,Mrs.Kamatchi,Placement Training(COMMUNICATION),9.21,9.32,9.17,9.20,9.27,9.18,9.38,9.11,9.26,9.15,9.22
+Artificial Intelligence and Machine Learning -A,2,Mrs.V.Sheela,23HST201 - Professional English II,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Artificial Intelligence and Machine Learning -A,2,Dr.S.Kanjanadevi,23MAT201- Computational Methods,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Artificial Intelligence and Machine Learning -A,2,Mrs.S.Banumathi,23PHT201 - Physics for Information Science,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Artificial Intelligence and Machine Learning -A,2,Ms.A.Muthumariyammal,23BET203Basic Electrical and Electronics Engineering,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Artificial Intelligence and Machine Learning -A,2,Dr.M.Natesh,23GET201- Engineering Graphics,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Artificial Intelligence and Machine Learning -A,2,Mrs.V.Manimala,23CST201- Problem Solving and Python Programming,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Artificial Intelligence and Machine Learning -A,2,Mrs.G.Mangaiyakarasi,23GET202- Tamils And Technology / .,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Artificial Intelligence and Machine Learning -A,2,Dr.M.Natesh/ Ms.A.Muthumariyammal,23GEP201 - Engineering Practices Laboratory,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Artificial Intelligence and Machine Learning -A,2,Mrs.V.Manimala,23CSP201- Problem Solving and Python Programming Laboratory,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Artificial Intelligence and Machine Learning -A,2,Mrs.V.Sheela,23GEP202- Communication Laboratory/ Foreign Language Laboratory,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Artificial Intelligence and Machine Learning -A,2,Mr.S.karthikeyan,Placement Training  Communication,9.00,10.00,9.00,9.00,9.00,10.00,9.00,10.00,9.00,9.00,9.30
+Artificial Intelligence and Machine Learning -A,2,Mr.Piyush,Placement Training  coding,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Computer Science and Engineering -B,4,Mrs.T.Gayathri,23CST402-Theory of  Computation,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00
+Computer Science and Engineering -B,4,Ms.S.Kamali,23ALT402-Artificial Intelligence and Machine Learning,10.00,10.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.20
+Computer Science and Engineering -B,4,Mr.K.Srinath Yadav,23CST403 Database Management System,10.00,10.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.20
+Computer Science and Engineering -B,4,Mr.S.P.Prasanth,23CST404Algorithms,9.00,10.00,9.00,9.00,10.00,10.00,9.00,10.00,9.00,9.00,9.40
+Computer Science and Engineering -B,4,Mr.Fayzul Raguman,23CST402 Introduction to Operating System,10.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.10
+Computer Science and Engineering -B,4,Dr.Venkatesh kumar,23GET401  Environmental Science and Sustainability,10.00,10.00,10.00,10.00,9.00,9.00,9.00,9.00,9.00,9.00,9.40
+Computer Science and Engineering -B,4,Mr.A.Murugavel,23CSP401- Operating Systems Laboratory,8.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,9.00,10.00,9.00
+Computer Science and Engineering -B,4,Mrs.Manimala,23CSP402- Database Management Systems      Laboratory,9.00,9.00,9.00,9.00,9.00,9.00,10.00,9.00,9.00,8.00,9.00
+Computer Science and Engineering -B,4,Ms.S.Kamali[SK],ALT402-Artificial Intelligence and Machine Learning Laboratory,9.00,9.00,8.00,9.00,9.00,9.00,9.00,9.00,9.00,10.00,9.00
+Computer Science and Engineering -B,4,Mr.S.P. Prasanth [SPP],23CST404-Algorithm Laboratory (ALG LAB),9.00,9.00,9.00,8.00,9.00,9.00,10.00,10.00,9.00,9.00,9.10
+Computer Science and Engineering -B,4,Mr.Pradesh,Placement Training  (CODING),10.00,9.00,9.00,10.00,10.00,10.00,10.00,9.00,10.00,9.00,9.60
+Computer Science and Engineering -B,4,Mrs.Kamatchi,Placement Training (COMMUNICATION),10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00
+Electronics and Communication Engineering -B,6,Mrs.B.Dhivya,Embedded System & IOT Design,9.08,8.92,9.00,9.00,8.75,8.75,9.08,9.08,9.00,9.00,8.97
+Electronics and Communication Engineering -B,6,Mr. R Sulaiman,Artificial Intelligence & Machine Learning,9.58,9.17,9.67,9.33,9.17,9.33,9.17,9.17,9.33,9.33,9.33
+Electronics and Communication Engineering -B,6,Dr P.Gomathi,Mixed Signal IC Design Testing,9.42,9.33,9.50,9.33,9.17,9.42,9.25,9.00,9.42,9.58,9.34
+Electronics and Communication Engineering -B,6,Mrs. M.Parvathi,RFID System Design & Testing,8.75,8.92,8.58,9.00,8.83,8.92,9.00,8.83,9.08,9.08,8.90
+Electronics and Communication Engineering -B,6,Mrs.K.Kalaichelvi,Communication Networks,9.42,9.42,9.42,9.67,9.42,9.42,9.25,9.67,9.75,9.33,9.47
+Electronics and Communication Engineering -B,6,Mr.M Sivanathan,Digital Marketing,9.00,9.25,9.08,9.25,9.42,9.25,8.75,9.50,9.33,8.75,9.16
+Electronics and Communication Engineering -B,6,Dr.Anumol Mathai,Embedded System & I0T Design Laboratory,9.67,9.67,9.67,9.83,9.33,9.33,9.58,9.58,9.58,9.50,9.57
+Electronics and Communication Engineering -B,6,Mr. M Ananthan,4G/5G Communication Networks,9.33,9.08,9.08,9.33,9.25,9.42,9.67,9.50,9.33,9.42,9.34
+Electronics and Communication Engineering -B,6,Dr P.Gomathi,Mixed Signal IC Design Testing Laboratory,9.50,9.50,9.17,9.33,9.25,9.17,9.33,9.25,9.00,9.58,9.31
+Electronics and Communication Engineering -B,6,Mrs. M.Parvathi,RFID System Design & Testing Laboratory,9.08,9.08,9.08,9.25,9.33,9.00,8.75,9.08,9.17,9.33,9.12
+Electronics and Communication Engineering -B,6,Mr. R Sulaiman,Artificial Intelligence & Machine Learning Laboratory,9.50,9.42,9.50,9.25,9.25,9.17,9.17,9.17,9.50,9.25,9.32
+Electronics and Communication Engineering -B,6,Mr.M Sivanathan,Digital Marketing Laboratory (DM LAB),9.50,9.17,9.17,9.17,9.17,9.33,9.33,9.17,9.25,9.42,9.27
+Biotechnology -A,6,Dr.M.A.Sundara Mahalingam,BT3601  Bioinformatics,9.40,9.00,9.20,9.20,9.40,9.40,9.20,9.60,9.40,9.60,9.34
+Biotechnology -A,6,Ms.Sumayafathima.S,BT365- Bioprocess Engineering,9.00,9.40,9.40,9.40,8.40,9.40,9.40,9.20,9.80,9.00,9.24
+Biotechnology -A,6,Dr.G.Pratap Kumar,CBT333 - Tissue Engineering (PEIV),9.40,8.80,9.40,8.40,9.20,8.60,9.00,9.20,9.20,8.80,9.00
+Biotechnology -A,6,Ms. G. Jeyashree,BT3025 -Animal Cell Culture Technology (PEV),9.40,9.20,8.80,9.40,9.00,9.00,8.80,9.00,9.00,9.40,9.10
+Biotechnology -A,6,Mr.R.Paulraj,OCS35- Artificial Intelligence and Machine Learning Fundamentals,8.60,9.00,8.80,9.00,8.60,9.00,8.80,8.80,9.40,8.60,8.86
+Biotechnology -A,6,Mr.R.Paulraj,OCS351- Artificial Intelligence and Machine Learning Fundamentals Lab,8.40,8.80,8.40,8.60,8.80,8.80,9.20,8.60,9.20,9.20,8.80
+Biotechnology -A,6,Mrs.Keerthiga.K,MX3089- Industrial Safety,9.40,8.80,9.00,9.00,8.80,9.60,9.00,9.20,9.00,9.40,9.12
+Biotechnology -A,6,Dr.M.A.Sundara Mahalingam,BT3611-Bioinformatics Lab,9.40,9.40,10.00,9.00,9.40,9.40,9.20,9.00,9.00,9.20,9.30
+Biotechnology -A,6,Mrs.Keerthiga.K,BT3661  Bioprocess Laboratory,9.60,9.80,9.60,9.60,9.20,9.60,9.60,9.40,9.20,9.40,9.50
+Artificial Intelligence and Data Science -C,2,Dr.S.Tivyanathan,23HST201- Professional English-II (PE-II),8.61,8.41,8.38,8.80,8.70,8.51,8.52,8.77,8.57,8.72,8.60
+Artificial Intelligence and Data Science -C,2,Mrs.K.Sangeetha,23MAT201-Computational method(CM),8.90,9.03,9.23,9.05,9.03,9.03,9.20,8.95,9.00,9.28,9.07
+Artificial Intelligence and Data Science -C,2,Ms.K.Priya,23PHT201-Physics for information science(PIS),9.49,9.49,9.36,9.43,9.44,9.36,9.46,9.49,9.41,9.59,9.45
+Artificial Intelligence and Data Science -C,2,Mrs.S.Yuvarani,23BET203-Basic electrical and electronic engineering(BEEE),9.30,9.23,9.10,8.98,9.18,9.11,9.30,9.18,9.10,9.21,9.17
+Artificial Intelligence and Data Science -C,2,Mr.K.Rajasekar,23GET201-Engineering graphics(EG),8.34,8.38,8.33,8.39,8.43,8.43,8.34,8.52,8.30,8.28,8.37
+Artificial Intelligence and Data Science -C,2,Dr.R.Murugesan,23CST201-Problem solving and python solving(PSPP),9.08,8.89,8.90,8.77,8.89,8.80,8.89,8.84,8.90,8.84,8.88
+Artificial Intelligence and Data Science -C,2,Mrs.Mangayarkarasi,23GET202-Tamil and technology(TT),9.52,9.36,9.31,9.26,9.20,9.18,9.28,9.34,9.31,9.39,9.32
+Artificial Intelligence and Data Science -C,2,Mr.K.Rajasekar[KR]/Mr.Vinothkumar,23GEP201 - Engineering Practices Laboratory(EP Lab),9.02,8.87,8.84,8.85,8.87,8.89,8.92,8.97,9.02,9.16,8.94
+Artificial Intelligence and Data Science -C,2,Mrs.S.Suganya,23CSP201- Problem Solving and Python Programming Laboratory (PSPP Lab),9.05,8.77,8.80,8.79,8.85,8.84,8.74,8.85,8.77,8.89,8.83
+Artificial Intelligence and Data Science -C,2,Dr.S.Tivyanathan,23GEP202- Communication Laboratory (CP Lab),8.64,8.57,8.64,8.66,8.51,8.51,8.69,8.90,8.72,8.79,8.66
+Artificial Intelligence and Data Science -C,2,Ms.B.Bharathi,Placement Training  Communication(PTM),9.57,9.56,9.51,9.59,9.66,9.54,9.44,9.48,9.51,9.52,9.54
+Artificial Intelligence and Data Science -C,2,Ms.B.Bharathi,Placement Training  coding(PTM),9.72,9.67,9.64,9.64,9.61,9.70,9.61,9.52,9.66,9.54,9.63
+Artificial Intelligence and Data Science -D,2,Ms.Kalaiayarasi,23HST201- Professional English-II (PE-II),8.33,9.33,8.33,8.67,8.67,9.33,8.00,8.33,9.00,9.00,8.70
+Artificial Intelligence and Data Science -D,2,Mrs.K.Sangeetha,23MAT201-Computational method(CM),9.00,8.67,9.33,9.00,9.33,8.67,9.00,9.00,9.00,9.00,9.00
+Artificial Intelligence and Data Science -D,2,Ms.K.Priya,23PHT201-Physics for information science(PIS),9.00,8.67,9.33,8.33,8.67,9.33,9.33,8.67,9.00,9.33,8.97
+Artificial Intelligence and Data Science -D,2,Ms.Shamala Devi,23BET203-Basic electrical and electronic engineering(BEEE),8.33,8.00,8.00,8.33,8.33,8.33,8.67,8.33,8.33,8.00,8.27
+Artificial Intelligence and Data Science -D,2,Mr.K.Rajasekar,23GET201-Engineering graphics(EG),8.33,8.33,8.00,7.67,8.33,8.00,8.33,8.33,7.67,8.33,8.13
+Artificial Intelligence and Data Science -D,2,Dr.Murugesan,23CST201-Problem solving and python solving(PSPP),8.33,8.33,8.33,8.33,8.00,7.67,8.67,8.00,8.33,8.67,8.27
+Artificial Intelligence and Data Science -D,2,Mrs.Mangayarkarasi,23GET202-Tamil and technology(TT),8.33,8.67,8.67,8.33,8.00,8.67,8.33,8.00,8.00,8.67,8.37
+Artificial Intelligence and Data Science -D,2,Mr.Dhanapal/Mrs.Ruthura devi,23GEP201 - Engineering Practices Laboratory(EP Lab),8.33,8.00,8.33,8.33,8.67,8.33,8.00,8.67,8.33,8.33,8.33
+Artificial Intelligence and Data Science -D,2,Dr.M.Rajendran,23CSP201- Problem Solving and Python Programming Laboratory (PSPP Lab),8.33,8.33,8.33,8.33,8.00,8.00,8.33,8.33,8.00,8.33,8.23
+Artificial Intelligence and Data Science -D,2,Ms.Kalaiayarasi,23GEP202- Communication Laboratory (CP Lab),8.67,8.67,8.33,8.33,8.33,8.33,8.00,7.67,8.33,8.67,8.33
+Artificial Intelligence and Data Science -D,2,Mr.Piyush,Placement Training  Communication(PTM),9.00,9.00,8.67,8.00,8.67,8.00,9.00,8.33,8.67,8.67,8.60
+Artificial Intelligence and Data Science -D,2,Ms.Yalini,Placement Training  coding(PTM),8.00,8.00,8.33,8.33,8.00,8.00,8.00,8.33,8.00,8.67,8.17
+Civil Engineering -A,4,Applied Hydraulic Engineering,Mrs.R.Sangeetha,9.29,9.50,9.50,9.50,9.57,9.50,9.50,9.43,9.64,9.50,9.49
+Civil Engineering -A,4,Soil Mechanics,Mr.K.Rajkumar,9.36,9.50,9.43,9.50,9.71,9.64,9.79,9.50,9.57,9.79,9.58
+Civil Engineering -A,4,Concrete Technology,Mr.M.Mohamed Nasurudeen,9.71,9.50,9.64,9.79,9.64,9.79,9.79,9.57,9.93,9.71,9.71
+Civil Engineering -A,4,Highway and Railway Engineering,Mr.M.Prasanakumar,9.57,9.64,9.57,9.57,9.50,9.64,9.64,9.43,9.50,9.50,9.56
+Civil Engineering -A,4,Strength of Materials,Dr.A.Vijayakumar,9.50,9.43,9.64,9.43,9.50,9.36,9.64,9.64,9.57,9.57,9.53
+Civil Engineering -A,4,Environmental Science and Engineering,Dr.N.Venkatachalam,9.36,9.21,9.21,9.36,9.43,9.43,9.43,9.43,9.36,9.14,9.34
+Civil Engineering -A,4,Materail Testing Laboratory,Mr.M.Prasanakumar,9.50,9.50,9.50,9.71,9.71,9.79,9.79,9.50,9.50,9.64,9.61
+Civil Engineering -A,4,Soil Mechanics Laboratory,Mr.K.Rajkumar,9.79,9.71,9.71,9.86,9.64,9.64,9.71,10.00,9.79,9.71,9.76
+Civil Engineering -A,4,Hydraulic Engineering Laboratory,Mrs.R.Sangeetha,9.50,9.79,9.64,9.57,9.57,9.50,9.43,9.79,9.64,9.64,9.61
+Civil Engineering -A,6,Design of Steel Structural Elements,Mrs.R.Sangeetha,9.44,9.56,9.72,9.61,9.72,9.78,9.67,9.61,9.61,9.72,9.64
+Civil Engineering -A,6,Structural Analysis II,Mr.X.Joesph Vianny,9.61,9.67,9.61,9.61,9.72,9.61,9.67,9.78,9.61,9.72,9.66
+Civil Engineering -A,6,Advanced Construction Techniques,Mr.M.Mohamed Nasurudeen,9.50,9.61,9.67,9.50,9.67,9.44,9.78,9.67,9.44,9.39,9.57
+Civil Engineering -A,6,Engineering Geology,Mr.M.Prasanakumar,9.44,9.50,9.61,9.61,9.72,9.56,9.72,9.56,9.50,9.61,9.58
+Civil Engineering -A,6,Rehabilitation/Restoration,Dr.A.Vijayakumar,9.78,9.78,9.72,9.72,9.78,9.78,9.72,9.78,9.61,9.67,9.73
+Civil Engineering -A,6,Prestressed Concrete Structures,Dr.G.Gnanapragasam,9.50,9.44,9.44,9.44,9.56,9.61,9.50,9.28,9.33,9.50,9.46
+Civil Engineering -A,6,Artificial Intelligence and Machine Learning Concepts,Mr.A.Bharadhidhasan,9.44,9.22,9.44,9.11,9.33,9.28,9.28,9.22,9.28,9.39,9.30
+Civil Engineering -A,6,Building Drawing and Detailing Laboratory,Mr.X.Joesph Vianny,9.67,9.72,9.72,9.72,9.67,9.78,9.61,9.61,9.67,9.56,9.67
+Civil Engineering -A,2,Computational Methods,Mr.D.Nagaraj,8.84,8.53,8.47,8.11,8.05,7.79,7.84,7.89,7.68,8.11,8.13
+Civil Engineering -A,2,Professional English,Mr.K.Balasubramanian,9.37,9.26,9.26,9.42,9.32,9.47,9.42,9.47,9.47,9.47,9.39
+Civil Engineering -A,2,Physics for Civil Engineering,Dr.P.Sangaiya,9.79,9.95,9.89,9.95,9.95,9.95,9.95,9.95,9.89,9.89,9.92
+Civil Engineering -A,2,"Basic Electrical, Electronics and Instrumentation Engineering",Dr.G.Saravanan,9.32,9.37,9.42,9.42,9.47,9.47,9.42,9.32,9.47,9.47,9.42
+Civil Engineering -A,2,Engineering Graphics,Mr.X.Joseph Vianny,9.84,9.84,9.89,9.95,9.95,9.89,9.95,9.79,9.84,9.84,9.88
+Civil Engineering -A,2,Tamils and Technology,Dr.P.Priya,9.26,9.37,9.11,9.21,9.21,9.26,9.26,9.37,9.21,9.32,9.26
+Civil Engineering -A,2,Engineering Practices Laboratory,Mr.M.Mohamed Nasurudeen/Dr.R.Meenal,9.26,9.32,9.21,9.26,9.32,9.26,9.32,9.42,9.37,9.37,9.31
+Civil Engineering -A,2,"Basic Electrical, Electronics and Instrumentation Engineering Laboratory",Mr.R.Arunkumar,9.16,9.16,9.21,9.32,9.26,9.00,9.00,8.95,9.16,9.05,9.13
+Civil Engineering -A,2,Communication Laboratory,Mr.K.Balasubramanian,9.42,9.53,9.42,9.42,9.42,9.47,9.32,9.21,9.37,9.37,9.39
+Chemical Engineering -A,2,Computational Methods,Mr.D.Nagaraj,7.33,6.67,7.00,7.00,7.33,6.67,7.33,6.67,7.33,6.67,7.00
+Chemical Engineering -A,2,Professional English,Mr.K.Balasubramanian,8.00,8.00,7.67,8.33,8.00,8.00,8.00,8.00,8.00,8.33,8.03
+Chemical Engineering -A,2,Physics of Materails,Dr.P.Sangaiya,9.00,9.00,9.33,9.33,9.00,9.33,9.00,9.33,9.33,9.00,9.17
+Chemical Engineering -A,2,"Basic Electrical, Electronics and Instrumentation Engineering",Dr.G.Saravanan,8.00,8.00,8.00,8.00,8.33,8.00,7.67,8.00,8.00,8.67,8.07
+Chemical Engineering -A,2,Engineering Graphics,Mr.X.Joseph Vianny,8.67,8.67,8.67,8.67,9.00,8.33,8.67,8.67,8.67,8.67,8.67
+Chemical Engineering -A,2,Basics of Chemical Engineering,Dr.S.Saravanan,8.33,8.67,8.33,8.67,8.33,8.67,8.33,8.67,8.33,8.67,8.50
+Chemical Engineering -A,2,Tamils and Technology,Dr.P.Priya,8.00,8.00,8.00,7.67,8.33,8.00,8.33,8.00,7.67,7.67,7.97
+Chemical Engineering -A,2,Engineering Practices Laboratory,"Mr.M.Mohamed Nasurudeen/
+Dr.R.Meenal",9.00,9.00,8.67,9.00,8.33,8.67,8.33,8.67,8.33,8.33,8.63
+Chemical Engineering -A,2,"Basic Electrical, Electronics and Instrumentation Engineering Laboratory",Mr.R.Arunkumar,9.00,9.33,9.33,9.33,9.33,9.33,9.33,9.33,9.00,9.33,9.27
+Chemical Engineering -A,2,Communication Laboratory,Mr.K.Balasubramanian,9.00,9.33,9.33,9.00,9.00,9.00,9.00,8.67,9.67,9.67,9.17
+Biomedical Engineering -A,6,Mr.R.MUTHUCHELVAN,ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING,9.28,9.09,9.04,9.11,9.02,9.04,9.09,9.15,9.11,9.24,9.12
+Biomedical Engineering -A,6,Ms.LAKSHMI PRIYA S,FUNDAMENTALS OF HEALTH CARE ANALYTICS,9.52,9.56,9.41,9.46,9.56,9.54,9.65,9.61,9.52,9.67,9.55
+Biomedical Engineering -A,6,Mrs.P.NANDHINI,MEDICAL IMAGE PROCESSING,9.59,9.52,9.46,9.50,9.44,9.57,9.50,9.61,9.57,9.59,9.54
+Biomedical Engineering -A,6,Dr.YUVARAJ V,ASSISTIVE TECHNOLOGY,9.44,9.35,9.41,9.44,9.46,9.44,9.46,9.46,9.41,9.44,9.43
+Biomedical Engineering -A,6,Mrs.S.KEERTHANA,COMMUNICATION SYSTEMS,9.63,9.57,9.54,9.39,9.50,9.48,9.61,9.59,9.67,9.52,9.55
+Biomedical Engineering -A,6,Ms.M.RAJALAKSHMI,MEDICAL IMAGING SYSTEMS,9.31,9.31,9.35,9.43,9.28,9.43,9.39,9.37,9.35,9.33,9.36
+Biomedical Engineering -A,6,Dr.NIHARIKA SINGH,"FOOD , NUTRITION AND HEALTH",9.30,9.33,9.31,9.22,9.35,9.41,9.35,9.41,9.28,9.52,9.35
+Biomedical Engineering -A,6,Mr.R.MUTHUCHELVAN,ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING LABORATORY,9.13,9.11,9.13,8.93,9.07,9.11,9.11,9.13,9.04,9.15,9.09
+Biomedical Engineering -A,6,Mrs.MALARVIZHI T,MEDICAL IMAGE PROCESSING LABORATORY,9.67,9.54,9.63,9.46,9.48,9.65,9.50,9.57,9.52,9.54,9.56
+Biomedical Engineering -A,4,Ms.LAKSHMI PRIYA S,BIOMEDICAL INSTRUMENTATION,9.25,9.42,9.00,8.75,9.08,9.08,9.08,9.17,9.17,9.00,9.10
+Biomedical Engineering -A,4,Dr.S.VIGNESHWARAN,ANALOG AND DIGITAL INTEGRATED CIRCUITS,6.58,6.58,6.42,6.50,7.17,6.42,6.42,6.83,6.33,6.67,6.59
+Biomedical Engineering -A,4,Mrs.A.P.SWARNALATHA,SIGNAL PROCESSING,9.42,9.42,9.42,9.42,9.33,9.42,9.25,9.00,9.25,9.42,9.33
+Biomedical Engineering -A,4,Dr.R.SARAVANAKUMAR,ENVIRONMENTAQL SCINECE AND ENGINEERING,9.08,9.42,9.08,9.17,9.25,9.33,9.42,9.25,9.33,9.58,9.29
+Biomedical Engineering -A,4,Mrs.C.NITHYA,BIOMEDICAL INSTRUMENTATIONLABORATORY,9.08,8.83,8.67,8.42,8.58,8.75,8.75,8.67,8.83,8.75,8.73
+Biomedical Engineering -A,4,Mrs.MALARVIZHI T,ANALOG AND DIGITAL INTEGRATED CIRCUITS  LABORATORY,9.50,9.42,9.25,9.33,9.33,9.58,9.33,9.25,9.50,9.58,9.41
+Biomedical Engineering -A,4,Ms.LAKSHMI PRIYA S,SIGNAL PROCESSING LABORATORY,9.33,9.08,9.25,9.33,9.08,9.00,9.33,9.17,9.33,9.25,9.22

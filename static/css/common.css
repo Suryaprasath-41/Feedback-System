@@ -1,0 +1,37 @@
+so i need to make an project. you can see models.csv file there the models are listed with their providors name and in the apikey.csv folder conatins the api key of the providors, the proviors are GROQ MODELS,COHERE ,SambaNova,GEMINI and in api keys also in the models folder i have written basic code to run the providors according to their names so i need you to 
+1. make a seperate folder with name backend and frontend 
+2. on the page there should be a option of selecting an model you can see in the models.csv , if i choose any model it should automatically catch the providor with the help of models.csv 
+3. there should be a box in which i can write prompt after selecting the model for eg take it as i have chosen a model from groq that model name should be automatically fit it code of groq.py 
+such as in this code of groq.py
+
+import os
+import openai
+
+client = openai.OpenAI(
+    base_url="https://api.groq.com/openai/v1",
+    api_key="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"
+)       
+completion = client.chat.completions.create(
+    model="llama-3.3-70b-versatile",
+    messages=[
+        {
+            "role": "user",
+            "content": "who are you"
+        }
+    ],
+    temperature=1,
+    max_completion_tokens=1024,
+    top_p=1,
+    stream=True,
+    stop=None,
+)
+
+for chunk in completion:
+    print(chunk.choices[0].delta.content or "", end="")
+
+here ithe model should change according to the model selected 
+
+4. the 4th and main important step is the api key suppose an user uses groq with a specific model with the with an first api key provided in apikey.csv then if that user do it for second tine then  the second api key must be used with their respected providors wich i can say as api rotation likewise build it like if the 1st api key used then it should move to the 2nd if the last api key which is 5th api key is used then it should return to that first api key so make it accordingly
+
+
+according to the logic write the code 

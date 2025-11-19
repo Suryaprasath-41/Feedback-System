@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Report for {{ department }} - {{ semester }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #f0f8ff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background: #007bff;
+            color: #fff;
+            padding: 7px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+        header {
+            top: 0;
+        }
+        header h1 {
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+        }
+        .college-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        footer {
+            bottom: 0;
+        }
+        .main-content {
+            margin-top: 140px;
+            margin-bottom: 60px;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: calc(100vh - 240px);
+        }
+        .content-box {
+            background: #e6f0fa;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1200px;
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .graph-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .report-title {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .overall-average {
+            text-align: center;
+            font-size: 1.4rem;
+            margin: 20px 0;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .action-buttons {
+            text-align: center;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="college-name">VSB ENGINEERING COLLEGE</div>
+        <h1>Faculty Report</h1>
+    </header>
+    
+    <div class="main-content">
+        <div class="content-box">
+            <div class="header-container">
+                <h2 class="report-title">Faculty Performance Report</h2>
+                <div class="overall-average">
+                    Overall Department Average: {{ averages }}
+                </div>
+            </div>
+
+            <div class="graph-container">
+                <img src="data:image/png;base64,{{ graph_url }}" alt="Report Graph" class="img-fluid mb-4">
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Staff (Subject)</th>
+                                {% for i in range(1, 11) %}
+                                    <th>Q{{ i }}</th>
+                                {% endfor %}
+                                <th>Overall</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for staff_data in detailed_ratings %}
+                                <tr>
+                                    <td>{{ staff_data.staff }} ({{ staff_data.subject }})</td>
+                                    {% for i in range(1, 11) %}
+                                        <td>{{ staff_data['q' + i|string + '_avg'] }}</td>
+                                    {% endfor %}
+                                    <td class="font-weight-bold">{{ staff_data.overall_average }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="{{ url_for('hod.download_report', department=department, semester=semester) }}" class="btn btn-primary btn-lg">
+                    Download Report Data (CSV)
+                </a>
+                <a href="{{ url_for('hod.download_graph', department=department, semester=semester) }}" class="btn btn-success btn-lg">
+                    Download Graph
+                </a>
+                <a href="{{ url_for('hod.download_pdf', department=department, semester=semester) }}" class="btn btn-danger btn-lg">
+                    Download Complete Report (PDF)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Report generated on {{ date }} | These site is Created and Managed by GenrecAI</p>
+        <a href="{{ url_for('hod.hod_select') }}" class="btn btn-outline-light">Back to Report Selection</a>
+    </footer>
+</body>
+</html>

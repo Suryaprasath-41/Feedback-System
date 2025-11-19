@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Select Department & Semester</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header {
+            background: linear-gradient(90deg, #0062cc 0%, #007bff 100%);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .college-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .main-content {
+            margin-top: 140px;
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 140px);
+        }
+        .content-box {
+            background: rgba(227, 235, 245, 0.9);
+            border: 2px solid #007bff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .content-box:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            color: #495057;
+        }
+        .form-group label i {
+            margin-right: 8px;
+            color: #007bff;
+        }
+        .btn {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0.5rem;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .btn i {
+            margin-right: 0.5rem;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #007bff 0%, #0062cc 100%);
+            border: none;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #0062cc 0%, #004c9e 100%);
+        }
+        .btn-info {
+            background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+            border: none;
+        }
+        .btn-info:hover {
+            background: linear-gradient(135deg, #138496 0%, #0f6674 100%);
+        }
+        .btn-warning {
+            background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+            border: none;
+            color: #212529;
+        }
+        .btn-warning:hover {
+            background: linear-gradient(135deg, #e0a800 0%, #ba8b00 100%);
+            color: #212529;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .alert {
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .back-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+        .back-link:hover {
+            color: #0056b3;
+            text-decoration: none;
+            background-color: rgba(0, 123, 255, 0.2);
+        }
+        .back-link i {
+            margin-right: 8px;
+        }
+        .section-title {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="college-name">VSB ENGINEERING COLLEGE</div>
+        <h1>Select Department & Semester</h1>
+    </header>
+    
+    <div class="main-content container">
+        <div class="content-box">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div id="flash-messages" class="text-center">
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }}">
+                                <i class="fas fa-{% if category == 'success' %}check-circle{% elif category == 'danger' %}exclamation-circle{% elif category == 'warning' %}exclamation-triangle{% else %}info-circle{% endif %} mr-2"></i>
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <h3 class="section-title">Generate Feedback Report</h3>
+
+            <form method="post" class="mx-auto" id="reportForm">
+                <div class="form-group">
+                    <label for="department"><i class="fas fa-building"></i> Department:</label>
+                    <select class="form-control" id="department" name="department" required aria-label="Select Department">
+                        <option value="">--Select Department--</option>
+                        {% for dept in departments %}
+                            <option value="{{ dept }}">{{ dept }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="semester"><i class="fas fa-calendar-alt"></i> Semester:</label>
+                    <select class="form-control" id="semester" name="semester" required aria-label="Select Semester">
+                        <option value="">--Select Semester--</option>
+                        {% for sem in semesters %}
+                            <option value="{{ sem }}">{{ sem }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="action-buttons">
+                    <button type="submit" name="action" value="view_pdf" class="btn btn-primary" id="viewBtn">
+                        <i class="fas fa-eye"></i> View Report
+                    </button>
+                    <button type="submit" name="action" value="download_pdf" class="btn btn-info" id="downloadBtn">
+                        <i class="fas fa-download"></i> Download Report
+                    </button>
+                    <button type="submit" name="action" value="non_submission_report" class="btn btn-danger" id="nonSubmissionBtn">
+                        <i class="fas fa-user-times"></i> View Non-Submission Report
+                    </button>
+                    <button type="submit" name="action" value="archive" class="btn btn-warning" id="archiveBtn" onclick="return confirm('This will save all current data to history and reset the system. Are you sure?')">
+                        <i class="fas fa-archive"></i> Archive & Reset
+                    </button>
+                </div>
+            </form>
+
+            <div class="text-right mt-3">
+                <a href="{{ url_for('hod.hod_login') }}" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to HOD Login
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright-footer">
+        This site is Created and Managed by GenrecAI<br>
+        <a href="https://revolvo-ai.netlify.app" target="_blank">Genrec.AI</a>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation to form elements
+            const formElements = document.querySelectorAll('.form-control, .btn');
+            formElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 300 + (index * 150));
+            });
+            
+            // Auto-hide flash messages
+            setTimeout(function() {
+                const flashMessages = document.getElementById('flash-messages');
+                if (flashMessages) {
+                    const alerts = flashMessages.querySelectorAll('.alert');
+                    alerts.forEach(alert => {
+                        alert.style.opacity = '0';
+                        alert.style.transform = 'translateY(-10px)';
+                        setTimeout(() => {
+                            alert.style.display = 'none';
+                        }, 500);
+                    });
+                }
+            }, 5000);
+            
+            // Add button click animations
+            const viewBtn = document.getElementById('viewBtn');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const nonSubmissionBtn = document.getElementById('nonSubmissionBtn');
+            const archiveBtn = document.getElementById('archiveBtn');
+            
+            if (viewBtn) {
+                viewBtn.addEventListener('click', function() {
+                    if (document.getElementById('department').value && document.getElementById('semester').value) {
+                        this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+                    }
+                });
+            }
+            
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', function() {
+                    if (document.getElementById('department').value && document.getElementById('semester').value) {
+                        this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing...';
+                    }
+                });
+            }
+
+            if (nonSubmissionBtn) {
+                nonSubmissionBtn.addEventListener('click', function() {
+                    if (document.getElementById('department').value && document.getElementById('semester').value) {
+                        this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating Report...';
+                    }
+                });
+            }
+            
+            if (archiveBtn) {
+                archiveBtn.addEventListener('click', function(e) {
+                    if (!confirm('This will save all current data to history and reset the system. Are you sure?')) {
+                        e.preventDefault();
+                        return false;
+                    } else {
+                        this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

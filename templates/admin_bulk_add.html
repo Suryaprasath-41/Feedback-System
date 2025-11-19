@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bulk Add Staff & Subjects - Feedback App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(90deg, #0062cc 0%, #007bff 100%);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .college-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .main-content {
+            margin-top: 140px;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: calc(100vh - 140px);
+        }
+        .content-box {
+            background: rgba(227, 235, 245, 0.9);
+            border: 2px solid #007bff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 1200px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .btn {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0.5rem;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border: none;
+        }
+        .card-header {
+            background: linear-gradient(90deg, #0062cc 0%, #007bff 100%);
+            color: white;
+            font-weight: 600;
+            border-radius: 12px 12px 0 0 !important;
+        }
+        textarea.form-control {
+            border-radius: 8px;
+            font-family: monospace;
+        }
+        .alert {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .instructions {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="college-name">VSB ENGINEERING COLLEGE</div>
+        <h1>Bulk Add Staff & Subjects</h1>
+    </header>
+    
+    <div class="main-content container">
+        <div class="content-box">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div id="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }}">
+                                <i class="fas fa-{% if category == 'success' %}check-circle{% elif category == 'danger' %}exclamation-circle{% elif category == 'warning' %}exclamation-triangle{% else %}info-circle{% endif %} mr-2"></i>
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <div class="row">
+                <!-- Bulk Add Staff -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-users mr-2"></i>Bulk Add Staff Members
+                        </div>
+                        <div class="card-body">
+                            <div class="instructions">
+                                <strong><i class="fas fa-info-circle mr-2"></i>Instructions:</strong>
+                                <ul class="mb-0 mt-2">
+                                    <li>Enter one staff name per line</li>
+                                    <li>Duplicates will be automatically skipped</li>
+                                    <li>Empty lines will be ignored</li>
+                                </ul>
+                            </div>
+                            <form method="post">
+                                <input type="hidden" name="action" value="add_staff">
+                                <div class="form-group">
+                                    <label for="staffText">Staff Names (one per line):</label>
+                                    <textarea class="form-control" name="staff_text" id="staffText" rows="15" placeholder="Dr. John Doe&#10;Prof. Jane Smith&#10;Dr. Robert Brown&#10;..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    <i class="fas fa-user-plus mr-2"></i>Add Staff Members
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bulk Add Subjects -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-book mr-2"></i>Bulk Add Subjects
+                        </div>
+                        <div class="card-body">
+                            <div class="instructions">
+                                <strong><i class="fas fa-info-circle mr-2"></i>Instructions:</strong>
+                                <ul class="mb-0 mt-2">
+                                    <li>Enter one subject name per line</li>
+                                    <li>Duplicates will be automatically skipped</li>
+                                    <li>Empty lines will be ignored</li>
+                                </ul>
+                            </div>
+                            <form method="post">
+                                <input type="hidden" name="action" value="add_subjects">
+                                <div class="form-group">
+                                    <label for="subjectsText">Subject Names (one per line):</label>
+                                    <textarea class="form-control" name="subjects_text" id="subjectsText" rows="15" placeholder="Data Structures&#10;Operating Systems&#10;Database Management&#10;..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block">
+                                    <i class="fas fa-book-medical mr-2"></i>Add Subjects
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 text-right">
+                <a href="{{ url_for('admin.admin') }}" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Mapping Page
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright-footer">
+        This site is Created and Managed by GenrecAI<br>
+        <a href="https://revolvo-ai.netlify.app" target="_blank">Genrec.AI</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-hide flash messages
+            setTimeout(function() {
+                var flash = document.getElementById('flash-messages');
+                if (flash) {
+                    const alerts = flash.querySelectorAll('.alert');
+                    alerts.forEach(alert => {
+                        alert.style.opacity = '0';
+                        alert.style.transform = 'translateY(-10px)';
+                        alert.style.transition = 'opacity 0.5s, transform 0.5s';
+                        setTimeout(() => {
+                            alert.style.display = 'none';
+                        }, 500);
+                    });
+                }
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

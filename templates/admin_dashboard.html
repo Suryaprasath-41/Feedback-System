@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Admin Dashboard - Feedback App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header {
+            background: linear-gradient(90deg, #0062cc 0%, #007bff 100%);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .college-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .main-content {
+            margin-top: 140px;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 140px);
+        }
+        .content-box {
+            background: rgba(227, 235, 245, 0.9);
+            border: 2px solid #007bff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 1200px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .content-box:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            overflow: hidden;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        .card-body {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .card-title {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .card-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            border-radius: 3px;
+        }
+        .card-text {
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+        }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%);
+            color: #212529;
+            border: none;
+            box-shadow: 0 4px 6px rgba(255, 215, 0, 0.3);
+        }
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #FFC107 0%, #FFB300 100%);
+            color: #212529;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(255, 215, 0, 0.4);
+        }
+        .btn-dark-red {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 6px rgba(220, 53, 69, 0.3);
+        }
+        .btn-dark-red:hover {
+            background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(220, 53, 69, 0.4);
+        }
+        .back-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+        .back-link:hover {
+            color: #0056b3;
+            text-decoration: none;
+            background-color: rgba(0, 123, 255, 0.2);
+        }
+        .back-link i {
+            margin-right: 8px;
+        }
+        .alert {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #007bff;
+            transition: all 0.3s ease;
+        }
+        .card:hover .card-icon {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="college-name">VSB ENGINEERING COLLEGE</div>
+        <h1>Admin Dashboard</h1>
+    </header>
+    
+    <div class="main-content container">
+        <div class="content-box">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div id="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }}">
+                                <i class="fas fa-{% if category == 'success' %}check-circle{% elif category == 'danger' %}exclamation-circle{% elif category == 'warning' %}exclamation-triangle{% else %}info-circle{% endif %} mr-2"></i>
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <div class="row mt-4">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-chalkboard-teacher card-icon"></i>
+                            <h3 class="card-title">Staff-Subject Mapping</h3>
+                            <p class="card-text">Map staff to subjects for each department and semester. Upload via Excel or add manually.</p>
+                            <a href="{{ url_for('admin.admin') }}" class="btn btn-gold">
+                                <i class="fas fa-link mr-2"></i>Go to Mapping
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-list-alt card-icon"></i>
+                            <h3 class="card-title">View/Delete Mappings</h3>
+                            <p class="card-text">View all existing mappings and delete individual or bulk mappings by department/semester.</p>
+                            <a href="{{ url_for('admin.view_mappings') }}" class="btn btn-warning">
+                                <i class="fas fa-eye mr-2"></i>View Mappings
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-plus-circle card-icon"></i>
+                            <h3 class="card-title">Bulk Add Staff/Subjects</h3>
+                            <p class="card-text">Add multiple staff members and subjects at once by entering names line by line.</p>
+                            <a href="{{ url_for('admin.bulk_add') }}" class="btn btn-info">
+                                <i class="fas fa-plus mr-2"></i>Bulk Add
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-user-graduate card-icon"></i>
+                            <h3 class="card-title">Student Management</h3>
+                            <p class="card-text">Add and manage student registrations by department and semester via Excel or manually.</p>
+                            <a href="{{ url_for('admin.admin_students') }}" class="btn btn-dark-red">
+                                <i class="fas fa-users mr-2"></i>Manage Students
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-right mt-3">
+                <a href="{{ url_for('student_login') }}" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Student Login
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright-footer">
+        This site is Created and Managed by GenrecAI<br>
+        <a href="https://revolvo-ai.netlify.app" target="_blank">Genrec.AI</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation to cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 300 + (index * 200));
+            });
+            
+            // Auto-hide flash messages
+            setTimeout(function() {
+                var flash = document.getElementById('flash-messages');
+                if (flash) {
+                    const alerts = flash.querySelectorAll('.alert');
+                    alerts.forEach(alert => {
+                        alert.style.opacity = '0';
+                        alert.style.transform = 'translateY(-10px)';
+                        setTimeout(() => {
+                            alert.style.display = 'none';
+                        }, 500);
+                    });
+                }
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

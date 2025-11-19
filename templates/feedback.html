@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Feedback for {{ department }} - {{ semester }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <style>
+        select.form-control {
+            width: 60px !important;
+            min-width: 60px !important;
+            padding: 6px 4px;
+            -webkit-appearance: menulist;
+            -moz-appearance: menulist;
+            appearance: menulist;
+            text-align: center;
+        }
+        body {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header {
+            background: linear-gradient(90deg, #0062cc 0%, #007bff 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-weight: bold;
+            margin: 0;
+            font-size: 1.8rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .main-content {
+            margin-top: 80px;
+            margin-bottom: 80px;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .page-title {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .page-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            border-radius: 3px;
+        }
+        .rating-table {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: none;
+        }
+        .rating-table th, .rating-table td { 
+            text-align: center; 
+            vertical-align: middle; 
+            padding: 12px 8px;
+        }
+        .rating-table th {
+            background: linear-gradient(90deg, #0062cc 0%, #007bff 100%);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .rating-table tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 123, 255, 0.05);
+        }
+        .rating-table tbody tr:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+        .questions-box { 
+            border: 2px solid #007bff; 
+            padding: 1.5rem; 
+            margin-top: 2rem; 
+            border-radius: 10px; 
+            background: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1200px;
+        }
+        .questions-box h5 {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .questions-box h5:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            border-radius: 3px;
+        }
+        .questions-box ol {
+            padding-left: 1.5rem;
+        }
+        .questions-box ol li {
+            margin-bottom: 0.5rem;
+            color: #495057;
+        }
+        .table-responsive { 
+            max-height: 60vh; 
+            overflow-y: auto;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #007bff 0%, #0062cc 100%);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #0062cc 0%, #004c9e 100%);
+            box-shadow: 0 6px 8px rgba(0, 123, 255, 0.3);
+        }
+        .btn-primary i {
+            margin-right: 8px;
+        }
+        .alert {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .avg-cell {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .staff-name {
+            font-weight: 600;
+            color: #495057;
+        }
+        .subject-name {
+            font-style: italic;
+            color: #6c757d;
+        }
+        .rating-highlight {
+            transition: all 0.3s ease;
+        }
+        .rating-highlight.good {
+            background-color: rgba(40, 167, 69, 0.1);
+        }
+        .rating-highlight.average {
+            background-color: rgba(255, 193, 7, 0.1);
+        }
+        .rating-highlight.poor {
+            background-color: rgba(220, 53, 69, 0.1);
+        }
+        .back-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+        .back-link:hover {
+            color: #0056b3;
+            text-decoration: none;
+            background-color: rgba(0, 123, 255, 0.2);
+        }
+        .back-link i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VSB ENGINEERING COLLEGE</h1>
+    </header>
+    
+    <div class="main-content container-fluid">
+        <h2 class="page-title">Feedback for {{ department }} - {{ semester }}</h2>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div id="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            <i class="fas fa-{% if category == 'success' %}check-circle{% elif category == 'danger' %}exclamation-circle{% elif category == 'warning' %}exclamation-triangle{% else %}info-circle{% endif %} mr-2"></i>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="post" id="feedbackForm">
+            <div class="table-responsive">
+                <table class="table table-bordered rating-table">
+                    <thead>
+                        <tr>
+                            <th>Staff Name</th>
+                            <th>Subject</th>
+                            {% for q in range(1, 11) %}
+                                <th>Q{{ q }}</th>
+                            {% endfor %}
+                            <th>Average</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for mapping in mappings %}
+                            {% set idx = loop.index0 %}
+                            <tr>
+                                <td class="staff-name">{{ mapping.staff }}</td>
+                                <td class="subject-name">{{ mapping.subject }}</td>
+                                {% for q in range(1, 11) %}
+                                    <td>
+                                        <select class="form-control" id="rating-{{ idx }}-{{ q }}"
+                                                name="rating-{{ idx }}-{{ q }}" required
+                                                onchange="updateAverage('{{ idx }}'); highlightSelection(this);"
+                                                onkeydown="handleEnterKey(event, this, '{{ idx }}', '{{ q }}')">
+                                            <option value="">--</option>
+                                            {% for i in range(1, 11) %}
+                                                <option value="{{ i }}">{{ i }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </td>
+                                {% endfor %}
+                                <td id="avg-{{ idx }}" class="avg-cell">0</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="questions-box">
+                <h5><i class="fas fa-question-circle mr-2"></i>Questions</h5>
+                <ol>
+                    {% for question in questions %}
+                        <li>{{ question }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+            
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Submit Feedback
+                </button>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="{{ url_for('student_login') }}" class="back-link">
+                    <i class="fas fa-arrow-left mr-1"></i> Back to Student Login
+                </a>
+            </div>
+        </form>
+    </div>
+    
+    <div class="copyright-footer">
+        This site is Created and Managed by GenrecAI<br>
+        <a href="https://revolvo-ai.netlify.app" target="_blank">Genrec.AI</a>
+    </div>
+    
+    <script>
+        // Handle Enter key to navigate between cells
+        function handleEnterKey(event, currentSelect, rowIdx, colIdx) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                
+                // Convert indices to numbers
+                rowIdx = parseInt(rowIdx);
+                colIdx = parseInt(colIdx);
+                
+                // Find next select element
+                let nextColIdx = colIdx + 1;
+                let nextRowIdx = rowIdx;
+                
+                // If we're at the last column, move to the next row
+                if (nextColIdx > 10) {
+                    nextColIdx = 1;
+                    nextRowIdx++;
+                }
+                
+                // Try to find the next select element
+                const nextSelect = document.getElementById(`rating-${nextRowIdx}-${nextColIdx}`);
+                if (nextSelect) {
+                    nextSelect.focus();
+                    // If the current select has a value, also open the dropdown of the next select
+                    if (currentSelect.value) {
+                        nextSelect.click();
+                    }
+                }
+            }
+        }
+
+        // Highlight selected values in dropdowns
+        function highlightSelection(selectElement) {
+            // Add a visual indicator to the select element
+            if (selectElement.value) {
+                // Add a custom attribute to store the selected value
+                selectElement.setAttribute('data-selected-value', selectElement.value);
+                
+                // Add a bold style to the select
+                selectElement.style.fontWeight = 'bold';
+                
+                // Add a background color based on the value
+                const val = parseInt(selectElement.value);
+                if (val >= 8) {
+                    selectElement.style.backgroundColor = '#d4edda'; // Light green
+                    selectElement.style.color = '#155724'; // Dark green
+                } else if (val >= 5) {
+                    selectElement.style.backgroundColor = '#fff3cd'; // Light yellow
+                    selectElement.style.color = '#856404'; // Dark yellow
+                } else {
+                    selectElement.style.backgroundColor = '#f8d7da'; // Light red
+                    selectElement.style.color = '#721c24'; // Dark red
+                }
+            } else {
+                // Reset styles if no value is selected
+                selectElement.removeAttribute('data-selected-value');
+                selectElement.style.fontWeight = '';
+                selectElement.style.backgroundColor = '';
+                selectElement.style.color = '';
+            }
+        }
+
+        // Calculate and update average ratings
+        function updateAverage(idx) {
+            var total = 0, count = 0;
+            for (var q = 1; q <= 10; q++) {
+                var selectElem = document.getElementById('rating-' + idx + '-' + q);
+                var val = parseFloat(selectElem.value);
+                if (!isNaN(val)) { 
+                    total += val; 
+                    count++; 
+                    
+                    // Add visual feedback for individual ratings
+                    if (val >= 8) {
+                        selectElem.parentElement.classList.add('rating-highlight', 'good');
+                        selectElem.parentElement.classList.remove('average', 'poor');
+                    } else if (val >= 5) {
+                        selectElem.parentElement.classList.add('rating-highlight', 'average');
+                        selectElem.parentElement.classList.remove('good', 'poor');
+                    } else if (val > 0) {
+                        selectElem.parentElement.classList.add('rating-highlight', 'poor');
+                        selectElem.parentElement.classList.remove('good', 'average');
+                    } else {
+                        selectElem.parentElement.classList.remove('rating-highlight', 'good', 'average', 'poor');
+                    }
+                }
+            }
+            
+            var avgElem = document.getElementById('avg-' + idx);
+            if (count === 10) {
+                const avg = total / count;
+                avgElem.textContent = avg.toFixed(2);
+                
+                // Add visual feedback for average
+                if (avg >= 8) {
+                    avgElem.style.color = '#28a745'; // Green for good
+                    avgElem.style.fontWeight = 'bold';
+                } else if (avg >= 5) {
+                    avgElem.style.color = '#ffc107'; // Yellow for average
+                    avgElem.style.fontWeight = 'bold';
+                } else {
+                    avgElem.style.color = '#dc3545'; // Red for poor
+                    avgElem.style.fontWeight = 'bold';
+                }
+            } else {
+                avgElem.textContent = 'N/A';
+                avgElem.style.color = '#007bff'; // Reset color
+                avgElem.style.fontWeight = 'normal';
+            }
+        }
+
+        // Initialize page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation to form elements
+            const formElements = document.querySelectorAll('.form-control, .btn');
+            formElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 100 + (index * 50)); // Faster animation for many elements
+            });
+            
+            // Auto-hide flash messages
+            setTimeout(function() {
+                const flashMessages = document.getElementById('flash-messages');
+                if (flashMessages) {
+                    const alerts = flashMessages.querySelectorAll('.alert');
+                    alerts.forEach(alert => {
+                        alert.style.opacity = '0';
+                        alert.style.transform = 'translateY(-10px)';
+                        setTimeout(() => {
+                            alert.style.display = 'none';
+                        }, 500);
+                    });
+                }
+            }, 5000);
+            
+            // Add form submission animation
+            const feedbackForm = document.getElementById('feedbackForm');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            if (feedbackForm && submitBtn) {
+                feedbackForm.addEventListener('submit', function() {
+                    // Check if all fields are filled
+                    let allFilled = true;
+                    const selects = document.querySelectorAll('select[required]');
+                    
+                    selects.forEach(select => {
+                        if (!select.value) {
+                            allFilled = false;
+                        }
+                    });
+                    
+                    if (allFilled) {
+                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+                        submitBtn.disabled = true;
+                    }
+                });
+            }
+            
+            // Apply initial highlighting to any pre-selected values
+            document.querySelectorAll('select.form-control').forEach(select => {
+                if (select.value) {
+                    highlightSelection(select);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
